@@ -4,6 +4,8 @@
 
 package frc.robot.subsystems;
 
+import com.ctre.phoenix6.hardware.TalonFX;
+
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class intake extends SubsystemBase {
@@ -12,8 +14,8 @@ public class intake extends SubsystemBase {
  private TalonFX intake;
  
   public intake() {
+
     intake = new TalonFX(12, "1599-B");
-   
 
   }
 
@@ -23,10 +25,15 @@ public class intake extends SubsystemBase {
   }
 
   public  void runIntake(double velocity) {
+
     intake.set(velocity);
+
   }
-  public void stopIntake() [
+  
+  public void stopIntake() {
+
     intake.set(0);
-  ]
+
+  }
   
 }
